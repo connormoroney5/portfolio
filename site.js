@@ -1,5 +1,5 @@
 // Shared header/footer: edit the NAV list once and every page updates.
-const NAV = [["index.html", "Home"], ["about.html", "About"], ["senior-design.html", "Senior Design"], ["projects.html", "Projects"], ["experience.html", "Experience"], ["resume.html", "Resume"], ["reflections.html", "Reflections"], ["ethics.html", "Ethics"]];
+const NAV = [["index.html", "Home"], ["about.html", "About"], ["projects.html", "Projects"], ["experience.html", "Experience"], ["resume.html", "Resume"], ["reflections.html", "Reflections"]];
 const here = location.pathname.split("/").pop() || "index.html";
 const cur = (h) => h === here || (h === "projects.html" && /^project-\d+\.html$/.test(here));
 document.getElementById("site-header").innerHTML = `<a class="skip" href="#main">Skip to content</a>
