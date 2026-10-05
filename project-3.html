@@ -1,27 +1,92 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project three | Connor Moroney</title>
-<meta name="description" content="One-sentence summary of what this project does.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="site.js" defer></script>
-</head>
-<body>
-<div id="site-header"></div>
-<main id="main">
-<header class="page-head"><div class="wrap"><p class="crumb"><a href="projects.html">&larr; All projects</a></p><h1>Project three</h1><p>One-sentence summary of what this project does.</p></div></header>
 
-<section class="block"><div class="wrap"><div class="media">Add a photo, diagram, or demo video here</div></div></section>
-<section class="block"><div class="wrap split"><h2>Description</h2><div><p class="todo">TODO: Two or three paragraphs: the problem, the goal, and what you built.</p><p>Write a clear description a non-engineer could follow.</p></div></div></section>
-<section class="block"><div class="wrap split"><h2>My role</h2><div><p>Say what you personally designed, built, and tested. Name teammates and how you split the work.</p></div></div></section>
-<section class="block"><div class="wrap split"><h2>Skills and knowledge gained</h2><div><ul class="plain"><li>Technical skill: <em>example</em></li><li>Technical skill: <em>example</em></li><li>Soft skill: <em>example</em></li></ul></div></div></section>
-<section class="block"><div class="wrap split"><h2>Resources used</h2><div><ul class="plain"><li>Course materials, datasheets, or documentation: <em>list them</em></li><li>Tools and libraries: <em>list them</em></li><li><a href="#">Repository or report link</a></li></ul></div></div></section>
-</main>
-<div id="site-footer"></div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RISC-V processor | Connor Moroney</title>
+    <meta name="description"
+        content="A processor designed in VHDL that reads and runs RISC-V instructions, built from gates up with a teammate.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
+</head>
+
+<body>
+    <div id="site-header"></div>
+    <main id="main">
+        <header class="page-head">
+            <div class="wrap">
+                <p class="crumb"><a href="projects.html">&larr; All projects</a></p>
+                <h1>RISC-V processor</h1>
+                <p>A processor designed in VHDL that reads and runs RISC-V instructions, built from gates up with a
+                    teammate.</p>
+            </div>
+        </header>
+
+        <section class="block">
+            <div class="wrap">
+                <div class="media">Add the processor block diagram here</div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Description</h2>
+                <div>
+                    <p>CPRE 3810: Computer Organization and Assembly Level Programming had two parts. In the first, I
+                        worked alone and used VHDL to build the basic components a processor is made of: logic gates,
+                        adders, registers, a register file, and more.</p>
+                    <p>In the second part, a team of two designed a processor that reads and executes RISC-V
+                        instructions. Our design includes the pieces you would expect, such as a program counter,
+                        instruction and data memory, a decoder, a control unit, a register file, and an ALU, along with
+                        hazard detection and forwarding units. Our processor ran the full set of required RISC-V
+                        instructions.</p>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>My role</h2>
+                <div>
+                    <p>With only two people on the team we did not have formal roles, and we each worked in the other's
+                        area. I did the majority of the work, mostly the implementation, while my teammate focused more
+                        on sketching and designing. We found that many of our bugs could have been prevented with better
+                        planning and sketching up front.</p>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Skills and knowledge gained</h2>
+                <div>
+                    <ul class="plain">
+                        <li>VHDL: building and testing digital components</li>
+                        <li>Computer architecture: datapath and control design, and how a processor executes RISC-V
+                            instructions</li>
+                        <li>Debugging hardware designs and planning before implementing</li>
+                        <li>An appreciation for the low-level layers that web development rests on</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Resources used</h2>
+                <div>
+                    <ul class="plain">
+                        <li>Course materials and the RISC-V instruction set specification</li>
+                        <li>Tools: VHDL and Git</li>
+                        <li><a href="https://github.com/norcon05/cpre3810" target="_blank" rel="noopener noreferrer">Team repository on GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="site-footer"></div>
 </body>
+
 </html>

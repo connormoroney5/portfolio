@@ -1,27 +1,99 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project two | Connor Moroney</title>
-<meta name="description" content="One-sentence summary of what this project does.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="site.js" defer></script>
-</head>
-<body>
-<div id="site-header"></div>
-<main id="main">
-<header class="page-head"><div class="wrap"><p class="crumb"><a href="projects.html">&larr; All projects</a></p><h1>Project two</h1><p>One-sentence summary of what this project does.</p></div></header>
 
-<section class="block"><div class="wrap"><div class="media">Add a photo, diagram, or demo video here</div></div></section>
-<section class="block"><div class="wrap split"><h2>Description</h2><div><p class="todo">TODO: Two or three paragraphs: the problem, the goal, and what you built.</p><p>Write a clear description a non-engineer could follow.</p></div></div></section>
-<section class="block"><div class="wrap split"><h2>My role</h2><div><p>Say what you personally designed, built, and tested. Name teammates and how you split the work.</p></div></div></section>
-<section class="block"><div class="wrap split"><h2>Skills and knowledge gained</h2><div><ul class="plain"><li>Technical skill: <em>example</em></li><li>Technical skill: <em>example</em></li><li>Soft skill: <em>example</em></li></ul></div></div></section>
-<section class="block"><div class="wrap split"><h2>Resources used</h2><div><ul class="plain"><li>Course materials, datasheets, or documentation: <em>list them</em></li><li>Tools and libraries: <em>list them</em></li><li><a href="#">Repository or report link</a></li></ul></div></div></section>
-</main>
-<div id="site-footer"></div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ISU Roommate Finder | Connor Moroney</title>
+    <meta name="description"
+        content="A native Android app that helps Iowa State students find compatible roommates, built by a team of four.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
+</head>
+
+<body>
+    <div id="site-header"></div>
+    <main id="main">
+        <header class="page-head">
+            <div class="wrap">
+                <p class="crumb"><a href="projects.html">&larr; All projects</a></p>
+                <h1>ISU Roommate Finder</h1>
+                <p>A native Android app that helps Iowa State students find compatible roommates, built by a team of
+                    four.</p>
+            </div>
+        </header>
+
+        <section class="block">
+            <div class="wrap">
+                <div class="media">Add a screenshot or demo video of the app's home screen here</div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Description</h2>
+                <div>
+                    <p>In COM S 3090: Software Development Practices, teams of four built a native mobile application,
+                        with the course designed to mirror how software is built in industry. Our app, ISU Roommate
+                        Finder, lets students create a profile, see housing announcements, and search for other students
+                        with similar preferences.</p>
+                    <p>The frontend is an Android app written in Java and XML in Android Studio. The backend is a Spring
+                        Boot server developed in IntelliJ IDEA, with a SQL database, and the two communicate over REST
+                        and WebSockets (the latter for real-time features and notifications).</p>
+                    <p>We followed an industry-style workflow: GitLab repositories, a SCRUM task board to track issues
+                        and progress, code reviews, automated tests (Espresso for Android, RestAssured for the backend),
+                        and CI/CD. We also used Postman to test our API.</p>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>My role</h2>
+                <div>
+                    <p>Our team had two frontend and two backend developers, and I was one of the frontend developers.
+                        After the individual demos, we worked as a group for three team demos. For each one I was
+                        responsible for designing two pages of the app. For the third demo I also designed and built the
+                        WebSocket connection between the frontend and backend and made sure it worked end to end.
+                        Although I focused on the frontend, I learned the backend concepts through lectures and by
+                        helping my teammates. I received an award as one of the top developers in the class, along with
+                        one of my teammates.</p>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Skills and knowledge gained</h2>
+                <div>
+                    <ul class="plain">
+                        <li>Android development: Java, XML layouts, and Android Studio</li>
+                        <li>Full-stack integration: REST round trips between frontend and Spring Boot backend, SQL
+                            databases, and WebSockets</li>
+                        <li>Testing and tooling: Espresso, RestAssured, Postman, and CI/CD</li>
+                        <li>Professional workflow: Git, SCRUM, and code reviews</li>
+                        <li>Teamwork: planning and following shared standards saves time in the long run</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Resources used</h2>
+                <div>
+                    <ul class="plain">
+                        <li>Course lectures and materials for COM S 3090</li>
+                        <li>Tools: Android Studio, IntelliJ IDEA, Spring Boot, Postman, GitLab</li>
+                        <li>Repository: <code>git.las.iastate.edu/cs309/2025spring/2_swarna_3</code> (requires an ISU
+                            account)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="site-footer"></div>
 </body>
+
 </html>

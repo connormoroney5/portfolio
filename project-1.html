@@ -1,27 +1,97 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project one | Connor Moroney</title>
-<meta name="description" content="One-sentence summary of what this project does.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="site.js" defer></script>
-</head>
-<body>
-<div id="site-header"></div>
-<main id="main">
-<header class="page-head"><div class="wrap"><p class="crumb"><a href="projects.html">&larr; All projects</a></p><h1>Project one</h1><p>One-sentence summary of what this project does.</p></div></header>
 
-<section class="block"><div class="wrap"><div class="media">Add a photo, diagram, or demo video here</div></div></section>
-<section class="block"><div class="wrap split"><h2>Description</h2><div><p class="todo">TODO: Two or three paragraphs: the problem, the goal, and what you built.</p><p>Write a clear description a non-engineer could follow.</p></div></div></section>
-<section class="block"><div class="wrap split"><h2>My role</h2><div><p>Say what you personally designed, built, and tested. Name teammates and how you split the work.</p></div></div></section>
-<section class="block"><div class="wrap split"><h2>Skills and knowledge gained</h2><div><ul class="plain"><li>Technical skill: <em>example</em></li><li>Technical skill: <em>example</em></li><li>Soft skill: <em>example</em></li></ul></div></div></section>
-<section class="block"><div class="wrap split"><h2>Resources used</h2><div><ul class="plain"><li>Course materials, datasheets, or documentation: <em>list them</em></li><li>Tools and libraries: <em>list them</em></li><li><a href="#">Repository or report link</a></li></ul></div></div></section>
-</main>
-<div id="site-footer"></div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CyBot navigation | Connor Moroney</title>
+    <meta name="description"
+        content="A Roomba-based robot that finds its way through an obstacle field, guided by a Python GUI I built.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
+</head>
+
+<body>
+    <div id="site-header"></div>
+    <main id="main">
+        <header class="page-head">
+            <div class="wrap">
+                <p class="crumb"><a href="projects.html">&larr; All projects</a></p>
+                <h1>CyBot navigation</h1>
+                <p>A Roomba-based robot that finds its way through an obstacle field, guided by a Python GUI I built.
+                </p>
+            </div>
+        </header>
+
+        <section class="block">
+            <div class="wrap">
+                <div class="media">Add the GUI screenshot (object map and path) or the interface sketch here</div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Description</h2>
+                <div>
+                    <p>In CPRE 2880: Embedded Systems, each team received a &ldquo;CyBot&rdquo;: a Roomba robot carrying
+                        a Tiva TM4C123GH6PM microcontroller, plus a servo-mounted IR sensor and PING (ultrasonic)
+                        sensor. We wrote C code to drive the robot and track where it was using those sensors. The final
+                        challenge was to steer the CyBot through a field of obstacles and reach a target end zone.</p>
+                    <p>Our team decided navigation would be much easier if we could see the field, so we built a GUI
+                        that plots detected objects and the path the CyBot has traveled. The GUI talks to the robot over
+                        UART, sends commands, and uses encoder counts and sensor scans to place the robot and each
+                        object on a map. It also shows a polar plot of the latest scan.</p>
+                    <p>To test without a physical robot, I wrote a &ldquo;Mock CyBot&rdquo;: a program that accepts the
+                        same navigation commands as the real one but returns simulated movements. That let me fix GUI
+                        problems before we ever touched the hardware. In our demo, the TA called our navigation
+                        &ldquo;really impressive.&rdquo;</p>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>My role</h2>
+                <div>
+                    <p>I wrote a large share of the C code for the CyBot and was the main developer of the GUI. I
+                        designed and programmed it in Python and built the Mock CyBot used to test it. The team worked
+                        together on the overall interface design (sketched above) and on testing the robot in the field.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Skills and knowledge gained</h2>
+                <div>
+                    <ul class="plain">
+                        <li>Embedded C: sensors, servo (PWM), UART communication, and encoder-based position tracking
+                        </li>
+                        <li>Python: building a live GUI that plots robot position and detected objects</li>
+                        <li>Testing with simulation: building a mock device so software can be debugged without hardware
+                        </li>
+                        <li>Teamwork: agreeing on an interface early so firmware and GUI could be built in parallel</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="block">
+            <div class="wrap split">
+                <h2>Resources used</h2>
+                <div>
+                    <ul class="plain">
+                        <li>Course materials and datasheets for the Tiva TM4C123GH6PM, IR sensor, and PING sensor</li>
+                        <li>Tools: C, Python, Git</li>
+                        <li><a href="https://github.com/tejaldev/288" target="_blank" rel="noopener noreferrer">Team repository on GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="site-footer"></div>
 </body>
+
 </html>

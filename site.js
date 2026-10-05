@@ -7,6 +7,6 @@ document.getElementById("site-header").innerHTML = `<a class="skip" href="#main"
 <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
 <nav id="nav" aria-label="Main"><ul>${NAV.map(([h, t]) => `<li><a href="${h}"${cur(h) ? ' aria-current="page"' : ""}>${t}</a></li>`).join("")}</ul></nav></div></header>`;
 document.getElementById("site-footer").innerHTML = `<footer class="site-foot"><div class="wrap"><div><p><strong>Connor Moroney</strong></p><p>Computer Engineering, Iowa State University</p></div>
-<div><p><a href="mailto:cwmoroney@gmail.com">cwmoroney@gmail.com</a></p><p>(563) 542-5020</p><p><a href="#">LinkedIn</a> &middot; <a href="#">GitHub</a></p></div></div></footer>`;
+<div><p><a href="mailto:cwmoroney@gmail.com">cwmoroney@gmail.com</a></p><p>(563) 542-5020</p><p><a href="https://www.linkedin.com/in/connor-moroney-563679290" target="_blank" rel="noopener noreferrer">LinkedIn</a>`;
 const b = document.querySelector(".menu-btn"), n = document.getElementById("nav");
 b.addEventListener("click", () => b.setAttribute("aria-expanded", n.classList.toggle("open")));
