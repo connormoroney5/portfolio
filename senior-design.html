@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Senior design project | Connor Moroney</title>
-    <meta name="description" content="Replace with your project name and a one-sentence summary.">
+    <meta name="description" content="A mobile-friendly web app that helps Bayer field operators record, review, and plan around corn moisture measurements, even without cell service.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,22 +21,37 @@
         <header class="page-head">
             <div class="wrap">
                 <p class="crumb"><a href="index.html">&larr; Home</a></p>
-                <h1>Senior design project</h1>
-                <p>Replace with your project name and a one-sentence summary.</p>
+                <h1>Field Harvest Data Collection Application</h1>
+                <p>A mobile-friendly web app that helps Bayer field operators record, review, and plan around corn
+                    moisture measurements, even without cell service.</p>
             </div>
         </header>
 
         <section class="block">
             <div class="wrap">
-                <div class="media">Add a photo, diagram, or demo video here</div>
+                <div class="media"><img src="assets/senior-design-mockup.png"
+                        alt="Mockup of the RowSense row-scanning screen" style="max-width:100%;height:auto;"></div>
             </div>
         </section>
         <section class="block">
             <div class="wrap split">
                 <h2>Description</h2>
                 <div>
-                    <p class="todo">TODO: Two or three paragraphs: the problem, the goal, and what you built.</p>
-                    <p>Write a clear description a non-engineer could follow.</p>
+                    <p>Corn moisture is one of the main signals for when a crop is ready to harvest. At Bayer, field
+                        operators walk rows repeatedly to take moisture readings, then record them and work out which
+                        rows still need more sampling. Organizing those readings and deciding where to sample next is
+                        slow and error-prone, and fields often have little or no cell reception.</p>
+                    <p>Our goal is to make that process simple and consistent. The application lets data collectors
+                        enter readings for each row, review past measurements, and see which parts of a field still need
+                        data. It flags readings that look like outliers, compares each row against expected moisture
+                        ranges for the season, and recommends when a row should be sampled again. Researchers can open
+                        the same app on a computer to view charts and trends, and supervisors can manage fields and
+                        assignments.</p>
+                    <p>We chose to build a web application rather than a native app, so there is nothing to install and
+                        everyone always has the latest version. To handle poor reception, readings are stored on the
+                        device and synced to a central database once a connection returns. This project is still in
+                        progress. So far we have gathered requirements with our client, built a prototype (RowSense),
+                        and defined the system's user roles.</p>
                 </div>
             </div>
         </section>
@@ -44,8 +59,13 @@
             <div class="wrap split">
                 <h2>My role</h2>
                 <div>
-                    <p>Say what you personally designed, built, and tested. Name teammates and how you split the work.
-                    </p>
+                    <p>I am the Component Design Lead on a six-person team (with Jonah Samuels, Carter Voelkel, Megan
+                        Chng, Cael Shroff, and Owen Gilbertson). I help drive the UI/UX and, as a full-stack developer,
+                        expect to focus mostly on the frontend. I also designed and built our team website.</p>
+                    <p>My work so far includes researching frameworks and existing solutions to similar problems, and
+                        defining the three user roles (Collector, Researcher, and Supervisor) along with what each can
+                        view, upload, edit, and delete. I am now researching how the app can work fully offline,
+                        including caching the app on a phone and syncing stored readings back to the server.</p>
                 </div>
             </div>
         </section>
@@ -54,9 +74,11 @@
                 <h2>Skills and knowledge gained</h2>
                 <div>
                     <ul class="plain">
-                        <li>Technical skill: <em>example</em></li>
-                        <li>Technical skill: <em>example</em></li>
-                        <li>Soft skill: <em>example</em></li>
+                        <li>Technical skill: <em>Role-based access control and server-side permission design</em></li>
+                        <li>Technical skill: <em>Offline-first web app design (caching, on-device storage, data sync)</em></li>
+                        <li>Technical skill: <em>Requirements gathering and UI/UX prototyping for mobile use in the field</em></li>
+                        <li>Soft skill: <em>Working with an industry client and translating vague needs into requirements</em></li>
+                        <li>Soft skill: <em>Collaborating on a multi-role team with shared documentation and weekly reporting</em></li>
                     </ul>
                 </div>
             </div>
@@ -66,9 +88,9 @@
                 <h2>Supporting documents</h2>
                 <div>
                     <ul class="plain">
+                        <li><a href="https://sdmay27-37.sd.ece.iastate.edu/">Team website</a></li>
                         <li><a href="assets/491-report.pdf">491 report</a></li>
-                        <li><a href="assets/492-report.pdf">492 report</a></li>
-                        <li><a href="#">Poster, demo video, or repository</a></li>
+                        <li><a href="assets/492-report.pdf">492 report</a> (coming Spring 2027)</li>
                     </ul>
                 </div>
             </div>
@@ -77,9 +99,14 @@
             <div class="wrap split">
                 <h2>Big picture contribution</h2>
                 <div>
-                    <p class="todo">TODO: Explain how your work fits into the whole project and why it matters to the
-                        client or user.</p>
-                    <p>Describe what the team delivered and what would not exist without your part.</p>
+                    <p>Bayer's researchers and field teams need trustworthy moisture data to decide when to harvest.
+                        My part shapes how people actually use the system: the interface collectors rely on in the
+                        field, and the access rules that keep the client's data safe. Collectors can only reach their
+                        assigned field and delete their own readings, researchers have read-only access, and only
+                        supervisors can change fields, users, and roles.</p>
+                    <p>Because every screen, database query, and sync rule depends on those roles, defining them early
+                        gives the whole team a foundation to build on. My offline research aims to make sure collectors
+                        never lose a reading when the signal drops, which is where the app matters most.</p>
                 </div>
             </div>
         </section>
