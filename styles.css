@@ -420,6 +420,48 @@ section.block:last-of-type {
     color: var(--cardinal)
 }
 
+/* make the whole card clickable via the title link */
+.project {
+    position: relative
+}
+
+.project h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0
+}
+
+.project:hover h3 a {
+    color: var(--cardinal)
+}
+
+.project:hover .thumb img {
+    transform: scale(1.03)
+}
+
+.thumb img {
+    transition: transform .2s ease
+}
+
+.project:has(h3 a:focus-visible) {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px
+}
+
+.project h3 a:focus-visible {
+    outline: none
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .thumb img {
+        transition: none
+    }
+
+    .project:hover .thumb img {
+        transform: none
+    }
+}
+
 @media(max-width:640px) {
     .project {
         grid-template-columns: 1fr
